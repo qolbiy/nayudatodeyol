@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kalendar.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="calendar">
+        <p id="namaBulan"></p>
+        <p id="namaHari"></p>
+        <p id="tanggal"></p>
+        <p id="tahun"></p>
+        <a class="link" href="parallax.html" target="_blank">Click Here</a>
+    </div>
+
+    
+    
+<script type="text/javascript">
+    const lang = navigator.language;
+    let date = new Date();
+
+    let tanggal = date.getDate();
+    let bulan = date.getMonth();
+    let namaHari = date.toLocaleString(lang,{weekday: 'long'})
+    let namaBulan = date.toLocaleString(lang,{month: 'long'})
+    let tahun = date.getFullYear()
+
+    document.getElementById('namaBulan').innerHTML = namaBulan;
+    document.getElementById('namaHari').innerHTML = namaHari;
+    document.getElementById('tanggal').innerHTML = tanggal;
+    document.getElementById('tahun').innerHTML = tahun;
+
+</script>
+
+</body>
+</html>
